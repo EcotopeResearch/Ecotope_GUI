@@ -1,0 +1,11 @@
+Variable,Enduse,Units,Measured_Calculated,Description
+DateTime,0,NA,NA,NA
+Service,1,kW,NA,NA
+Lights,1,kW,NA,NA
+HP,1,kW,NA,NA
+Work_Station_Receptacles,1,kW,NA,NA
+Phone_Alarm,1,kW,NA,NA
+IDT,1,F,NA,NA
+WST,1,F,,
+daily_EUI,1,EUI,NA,NA
+Humidity,1,RH,,
