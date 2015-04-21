@@ -7,5 +7,5 @@ Work_Station_Receptacles,1,kW,NA,NA
 Phone_Alarm,1,kW,NA,NA
 IDT,1,F,NA,NA
 WST,1,F,,
-daily_EUI,1,EUI,NA,NA
+Annualized_EUI,1,EUI,NA,NA
 Humidity,1,RH,,

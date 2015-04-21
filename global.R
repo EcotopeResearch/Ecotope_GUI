@@ -3,6 +3,8 @@ library(ggplot2)
 library(reshape2)
 library(lubridate)
 library(shiny)
+library(dplyr)
+library(tidyr)
 rdas=list.files(pattern=".rda")
 for (file in rdas) {load(file)}
 
