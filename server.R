@@ -23,15 +23,7 @@ shinyServer(function(input, output) {
 #     smooth=isolate(input$smooth)
     plot_gui(enduses,dates)    
   })
-#   
-#   output$table_gui = renderText({
-#     input$goButton
-#     enduses=isolate(input$enduses)
-#     dates=isolate(input$dates)  
-#     #     smooth=isolate(input$smooth)    
-#     table_gui(enduses,dates)
-#     })
-  
+
   output$table_gui = renderTable({
   input$goButton
   enduses=isolate(input$enduses)

@@ -7,14 +7,19 @@ shinyUI(fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      actionButton("goButton", "Plot"),
+      actionButton("goButton", "Go"),
       htmlOutput("selectEnduses"),
-#       htmlOutput("selectStart"),
-      sliderInput("start_ind","Starting Slider:",min = 0,max = 1,value = 0,step=.005),
-      numericInput("obs", label = h3("Days"), value = 60)
+      dateRangeInput("dates", label = h3("Date Range"),start="2015-01-01")
+      #       selectInput("smooth", label = h3("Smoother Range"), 
+      #                   choices = list("None" = 1, "Day" = 288, "Week" = 2016, "4 weeks" = 8064), 
+      #                   selected = 1)
+      
     ),
     mainPanel(
-      plotOutput("plot_gui")
+      tabsetPanel(
+        tabPanel("Plot",plotOutput("plot_gui")),
+        tabPanel("Table", tableOutput("table_gui"))
+      )
     )
   )
 )
