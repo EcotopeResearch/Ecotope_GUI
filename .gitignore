@@ -41,3 +41,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+data.rda
+plot_gui.R
+data.rda
+*.R

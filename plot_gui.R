@@ -12,11 +12,17 @@ plot_gui=function(enduses,dates,smooth=1) {
   
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   melted=try(gather(file,"Variable","value",-time_ind,na.rm=TRUE),silent=TRUE)
   if (class(melted)=="try-error") return(NULL)
   melted=try(merge(x=melted,y=data_dictionary,by="Variable"),silent=TRUE)
   # melted=try(left_join(x=melted,y=data_dictionary),silent=TRUE)
+=======
+  melted=melt(data=file,id.vars=paste(names(file)[time_ind]),na.rm=TRUE)  
+  
+  melted=try(merge(x=melted,y=data_dictionary,by.x="variable",by.y="Variable"),silent=TRUE)
+>>>>>>> parent of 6984736... before date ranges
 =======
   melted=melt(data=file,id.vars=paste(names(file)[time_ind]),na.rm=TRUE)  
   
@@ -35,6 +41,7 @@ plot_gui=function(enduses,dates,smooth=1) {
   g
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 table_gui=function(enduses,dates,smooth=1) {
   file=gui_munge(file,enduses,dates,smooth=1)
@@ -100,6 +107,10 @@ gui_munge=function(file,enduses,dates,smooth=1){
   
   return(file)
 }
+=======
+
+
+>>>>>>> parent of 6984736... before date ranges
 =======
 
 
