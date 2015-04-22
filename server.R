@@ -13,19 +13,17 @@ shinyServer(function(input, output) {
     try(checkboxGroupInput("enduses", label = h3("Select End Use"), searchVar(),selected=searchVar()[1] ),silent=TRUE)
   })
   
+
+  
   
   output$plot_gui <- renderPlot({
     
     input$goButton
-    
-    start_ind=isolate(input$start_ind)
     enduses=isolate(input$enduses)
-    obs=isolate(input$obs)
+    dates=isolate(input$dates)
+#     smooth=isolate(input$smooth)
     
-#     start_ind=input$start_ind
-#     enduses=input$enduses
-#     obs=input$obs
-    plot_gui(start_ind,enduses,obs)    
+    plot_gui(enduses,dates)    
     
   })
   
