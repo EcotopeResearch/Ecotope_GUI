@@ -17,17 +17,29 @@ shinyServer(function(input, output) {
   
   
   output$plot_gui <- renderPlot({
-    
     input$goButton
     enduses=isolate(input$enduses)
     dates=isolate(input$dates)
 #     smooth=isolate(input$smooth)
-    
     plot_gui(enduses,dates)    
-    
   })
+#   
+#   output$table_gui = renderText({
+#     input$goButton
+#     enduses=isolate(input$enduses)
+#     dates=isolate(input$dates)  
+#     #     smooth=isolate(input$smooth)    
+#     table_gui(enduses,dates)
+#     })
   
-  
+  output$table_gui = renderTable({
+  input$goButton
+  enduses=isolate(input$enduses)
+  dates=isolate(input$dates)  
+  #     smooth=isolate(input$smooth)    
+  cool_table=table_gui(enduses,dates)
+  cool_table
+  })
   
 })
 
