@@ -9,25 +9,24 @@ plot_gui=function(enduses,dates,smooth=1) {
   
   ##
   data_dictionary=data_dictionary[data_dictionary$Variable %in% enduses,]
-  
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
+    
   melted=try(gather(file,"Variable","value",-time_ind,na.rm=TRUE),silent=TRUE)
   if (class(melted)=="try-error") return(NULL)
   melted=try(merge(x=melted,y=data_dictionary,by="Variable"),silent=TRUE)
   # melted=try(left_join(x=melted,y=data_dictionary),silent=TRUE)
-=======
+
   melted=melt(data=file,id.vars=paste(names(file)[time_ind]),na.rm=TRUE)  
   
   melted=try(merge(x=melted,y=data_dictionary,by.x="variable",by.y="Variable"),silent=TRUE)
->>>>>>> parent of 6984736... before date ranges
-=======
+
   melted=melt(data=file,id.vars=paste(names(file)[time_ind]),na.rm=TRUE)  
   
   melted=try(merge(x=melted,y=data_dictionary,by.x="variable",by.y="Variable"),silent=TRUE)
->>>>>>> parent of 6984736... before date ranges
+
+  melted=melt(data=file,id.vars=paste(names(file)[time_ind]),na.rm=TRUE)  
+  
+  melted=try(merge(x=melted,y=data_dictionary,by.x="variable",by.y="Variable"),silent=TRUE)
+
   if (class(melted)=="try-error") return(NULL)
   
   if(length(levels(as.factor(as.character(data_dictionary$Units))))>1) {
@@ -40,9 +39,6 @@ plot_gui=function(enduses,dates,smooth=1) {
   g =g+ ylab("") + scale_color_discrete(name="Legend") + ggtitle("Ecotope Seattle Office")
   g
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 table_gui=function(enduses,dates,smooth=1) {
   file=gui_munge(file,enduses,dates,smooth=1)
   file=tbl_df(file)
@@ -107,11 +103,3 @@ gui_munge=function(file,enduses,dates,smooth=1){
   
   return(file)
 }
-=======
-
-
->>>>>>> parent of 6984736... before date ranges
-=======
-
-
->>>>>>> parent of 6984736... before date ranges
