@@ -1,11 +1,10 @@
 "Variable","Enduse","Units","Measured_Calculated","Description","min","median_above_zero","max"
 "DateTime",NA,NA,NA,NA,Inf,NA,-Inf
-"Service",NA,NA,NA,NA,0.2,1.3,10.5
+"Service",NA,NA,NA,NA,0,1.3,10.5
 "Lights",NA,NA,NA,NA,0,0.3,1
-"HP",NA,NA,NA,NA,0,0.2,6
-"Reception",NA,NA,NA,NA,0,0.3,2
-"Phone_Alarm",NA,NA,NA,NA,0,0,0
+"Phone_Alarm",NA,NA,NA,NA,0,0,0.9
+"Server",NA,NA,NA,NA,0.9,0.9,1
 "IDT",NA,NA,NA,NA,65.5,77.4,85.7
-"IDT.1",NA,NA,NA,NA,71.7,72.4,73.1
-"Humidity",NA,NA,NA,NA,33.9,35.3,38.1
-"daily_EUI",NA,NA,NA,NA,0,18.4,50.1
+"HP",NA,NA,NA,NA,0,0.2,6
+"Work_Station_Receptacles",NA,NA,NA,NA,0,0.3,2
+"Annualized_EUI",NA,NA,NA,NA,0,14.7,116.9

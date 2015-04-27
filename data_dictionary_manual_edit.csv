@@ -1,11 +1,13 @@
-Variable,Enduse,Units,Measured_Calculated,Description
-DateTime,0,NA,NA,NA
-Service,1,kW,NA,NA
-Lights,1,kW,NA,NA
-HP,1,kW,NA,NA
-Work_Station_Receptacles,1,kW,NA,NA
-Phone_Alarm,1,kW,NA,NA
-IDT,1,F,NA,NA
-WST,1,F,,
-daily_EUI,1,EUI,NA,NA
-Humidity,1,RH,,
+Variable,Enduse,Units,Description
+DateTime,0,NA,NA
+Service,1,Kilowatts,Total Office Service Load Metered
+Lights,1,Kilowatts,Lighting
+HP,1,Kilowatts,Heat Pump
+Work_Station_Receptacles,1,Kilowatts,Work Station Plug Loads
+Phone_Alarm,1,Kilowatts,Phone Alarm
+IDT,1,Fahrenheit,Indoor Temperature (Kitchen)
+WST,1,Fahrenheit,Weather Station Temperature
+Annualized_EUI,1,kBtu per Square Foot,Annualized Energy Use Index
+Service_Billed,1,Kilowatts,Total Office Service Load Billed
+Annualized_EUI_Billed,1,kBtu per Square Foot,Annualized Energy Use Index Billed
+Server,1,Kilowatts,Computer Server

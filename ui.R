@@ -9,16 +9,18 @@ shinyUI(fluidPage(
     sidebarPanel(
       actionButton("goButton", "Go"),
       htmlOutput("selectEnduses"),
-      dateRangeInput("dates", label = h3("Date Range"),start="2015-01-01")
-      #       selectInput("smooth", label = h3("Smoother Range"), 
-      #                   choices = list("None" = 1, "Day" = 288, "Week" = 2016, "4 weeks" = 8064), 
-      #                   selected = 1)
-      
+      dateRangeInput("dates", label = h3("Date Range"),start="2015-01-01"),
+      selectInput("smooth", label = h3("Smoother Range"), 
+                  choices = list("None" = 1, "Day" = 288, "Week" = 2016, "4 weeks" = 8064), 
+                  selected = 1)
     ),
+    
     mainPanel(
       tabsetPanel(
-        tabPanel("Plot",plotOutput("plot_gui")),
-        tabPanel("Table", tableOutput("table_gui"))
+        tabPanel("Plot", plotOutput("plot_gui")),
+        tabPanel("Table", tableOutput("table_gui")),
+        tabPanel("Compare", plotOutput("compare_gui")),
+        tabPanel("Data Dictionary", tableOutput("dictionary_gui"))
       )
     )
   )
